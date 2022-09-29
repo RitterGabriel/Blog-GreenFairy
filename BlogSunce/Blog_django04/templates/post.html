@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block sub_header %}
+    <section class="jumbotron text-center">
+        <div class="container">
+        </div>
+      </section>
+{% endblock %}
+{% block content %}
+    <div class="blog-post" style="margin: 20px;">
+        <h2 class="blog-post-title">
+            {{ post.title }}
+        </h2>
+        <p class="blog-post-meta">{{post.created_at|date:'d, M Y'}} por {{ post.author }}</p>
+        {{ post.summary|safe }}
+        {{ post.content|safe }}
+    </div>
+{% endblock %}

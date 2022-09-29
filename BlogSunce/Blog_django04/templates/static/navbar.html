@@ -1,0 +1,54 @@
+<style>
+  .dropbtn {
+    background-color: #397d63;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #397d63;
+    min-width: 50px;
+    border-radius: 1px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #c1c1c1;
+    border-radius: 6px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+<div class="input-group mb-3">
+  <div class="dropdown">
+    <button class="dropbtn">Categorias</button>
+    <div class="dropdown-content">
+      <a href="politic/"> Flores </a>
+      <a href="sport/"> Plantas </a>
+      <a href="tech/"> Frutíferas </a>
+    </div>
+  </div>
+</div>

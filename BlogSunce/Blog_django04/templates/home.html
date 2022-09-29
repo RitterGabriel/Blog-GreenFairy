@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block sub_header %}
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">GreenFairy</h1>
+    <br><br>
+    <img src="C:\\Users\\Gustavo\\Documents\\VscodeProjetos\\BlogDjango3\\templates\\devLogo.png" alt="">
+    <p class="lead text-muted">GreenFairy Jardinagem</p>
+    <p>
+    </p>
+  </div>
+</section>
+{% endblock %}
+{% block content %}
+<div class="album py-5 bg-light">
+  <div class="container">
+    {% include 'static/navbar.html' %}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {%for post in posts%}
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{{post.image}}" style="height:300px;">
+          <div class="card-body card-content" style="height:300px;">
+            <strong> {{post.title}} </a></strong>
+            <p class="card-text">{{post.description}}</p>
+            <div class="viex-container" style="position: relative; bottom: 0px;">
+              <div class="btn-group">
+                <a href="/posts/{{post.pk}}"><button type="button"
+                    class="btn btn-sm btn-outline-secondary">View</button></a>
+              </div>
+              <small class="text-muted">{{post.created_at}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+</div>
+{% endblock %}
